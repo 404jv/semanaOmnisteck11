@@ -3,7 +3,7 @@ const connection = require('../database/connection');
 module.exports = {
 
     async index(req, res) {
-        const { page = 1} = req.query;
+        const { page = 1 } = req.query;
 
         const [count] = await connection('incidents').count();
 
@@ -18,7 +18,7 @@ module.exports = {
                 'ongs.whatsapp', 
                 'ongs.city',
                 'ongs.uf',
-            ])
+            ]);
 
         res.header('X-Total-Count', count['count(*)'])
 
@@ -36,7 +36,7 @@ module.exports = {
             ong_id,
         });
 
-        return res.json({ id })
+        return res.json({ id });
     },
 
     async delete(req, res) {
