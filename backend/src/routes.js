@@ -15,6 +15,7 @@ routes.post('/sessions', celebrate({
 }), SessionsContoller.create);
 
 routes.get('/ongs', OngController.index);
+
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required().min(3),
@@ -46,12 +47,23 @@ routes.get('/incidents', celebrate({
     [Segments.QUERY]: Joi.object().keys({
         page: Joi.number(),
     }),
-}),IncidentsController.index);
+}), IncidentsController.index);
 
 routes.delete('/incidents/:id', celebrate({
     [Segments.PARAMS]: Joi.object().keys({
         id: Joi.number().required(),
     }),
 }), IncidentsController.delete);
+
+routes.put('/incidents/:id', celebrate({
+    [Segments.HEADERS]: Joi.object({
+        authorization: Joi.string().required(),
+    }).unknown(),
+    [Segments.BODY]: Joi.object().keys({
+        title: Joi.string().required(),
+        description: Joi.string().required(),
+        value: Joi.number().required(),
+    }),
+}), IncidentsController.update);
 
 module.exports = routes;
