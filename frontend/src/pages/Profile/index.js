@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { FiPower, FiTrash2, FiEdit2 } from 'react-icons/fi';
 
 import api from '../../services/api';
 
@@ -80,8 +80,12 @@ export default function Profile() {
                             }).format(incident.value)}
                         </p>
 
-                        <button onClick={() => handleDeleteIncident(incident.id)}>
+                        <button className="delete" onClick={() => handleDeleteIncident(incident.id)}>
                             <FiTrash2 size={20} color="#a8a8b3"/>
+                        </button>
+
+                        <button className="edit" onClick={() => {}}>
+                            <FiEdit2 size={20} color="#a8a8b3"/>
                         </button>
                     </li>
                 ))}

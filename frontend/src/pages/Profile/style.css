@@ -61,16 +61,26 @@
     position: relative;
 }
 
-.profile-container ul li button {
+.profile-container ul li .delete,
+.profile-container ul li .edit {
     background-color: #FFF;
     position: absolute;
-    right: 24px;
-    top: 24px;
     border: 0;
 } 
 
-.profile-container ul li button:hover {
+.profile-container ul li .delete:hover,
+.profile-container ul li .edit:hover {
     opacity: 0.8;
+}
+
+.profile-container ul li .delete {
+    right: 24px;
+    top: 24px;
+}
+
+.profile-container ul li .edit {
+    right: 24px;
+    top: 55px;
 }
 
 .profile-container ul li strong {
