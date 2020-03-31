@@ -32,7 +32,6 @@ export default function Profile() {
                 headers: {
                     Authorization: ongId,
                 },
-
             });
 
             setIncidents(incidents.filter(incident => incident.id !== id));
@@ -83,10 +82,10 @@ export default function Profile() {
                         <button className="delete" onClick={() => handleDeleteIncident(incident.id)}>
                             <FiTrash2 size={20} color="#a8a8b3"/>
                         </button>
-
-                        <button className="edit" onClick={() => {}}>
+                        
+                        <Link className="edit" to="/incidents/update">
                             <FiEdit2 size={20} color="#a8a8b3"/>
-                        </button>
+                        </Link>
                     </li>
                 ))}
             </ul>
