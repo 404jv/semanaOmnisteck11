@@ -99,3 +99,9 @@
     line-height: 21px;
     font-size: 16px;
 }
+
+.profile-container ul li .id {
+    position: absolute;
+    bottom: 24px;
+    right: 15px;
+}

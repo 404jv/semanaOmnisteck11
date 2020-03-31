@@ -86,6 +86,8 @@ export default function Profile() {
                         <Link className="edit" to="/incidents/update">
                             <FiEdit2 size={20} color="#a8a8b3"/>
                         </Link>
+
+                        <strong className="id">ID: {incident.id}</strong>
                     </li>
                 ))}
             </ul>
