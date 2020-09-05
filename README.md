@@ -1,6 +1,6 @@
 <h1 align="center">
 	<img src="./frontend/src/assets/logo.svg"/>
-	<p>Not every hero wears a cape!🦸‍♂️🦸‍♀️</p>
+	<p>Not all hero wears a cape!🦸‍♂️🦸‍♀️</p>
 </h1>
 
 <h1>
