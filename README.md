@@ -11,7 +11,7 @@
 
 ## 📕 About
 
-**Be The Hero** is a project that aims to help NGOs quickly, with just a few clicks you can become and lives will be saved.
+**Be The Hero** is a project that aims to help NGOs quickly, with just a few clicks you can become a hero and lives will be saved.
 
 ## 🦸‍♀️ What do NOGs do for society?
 
